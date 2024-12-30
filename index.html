@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do App</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <!-- Main card body -->
+  <body class="container">
+    <br />
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <!-- Section 1 for Start Date  -->
+            <div class="form-group">
+              <label for="new-start-date">Start Date</label>
+              <input type="date" class="form-control" id="new-start-date" />
+            </div>
+          </div>
+
+          <!-- Section 2 for End Date  -->
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="new-end-date">End Date</label>
+              <input type="date" class="form-control" id="new-end-date" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 for Task  -->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="new-task">Task</label>
+              <input
+                type="text"
+                class="form-control"
+                id="new-task"
+                placeholder="Task"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4 for Submit Button to create new row  -->
+        <div>
+          <button id="add" class="btn btn-primary form form-control">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 for dynamically newly added rows -->
+    <table id="list" class="table table-dark table-striped mt-4">
+      <tr>
+        <th>Task</th>
+        <th>Date Created</th>
+        <th>Start Date</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+      </tr>
+    </table>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="todo.js"></script>
+  </body>
+</html>
